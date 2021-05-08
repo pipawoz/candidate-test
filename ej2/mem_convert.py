@@ -23,7 +23,8 @@ def mem_convert(input_file, output_file):
         f.write(converted_data)
 
     with open(os.path.join(os.getcwd(), output_file), 'w') as f:
-        f.write('\n'.join(dump_data))
+        dump_data = '\n'.join(dump_data) + '\n'
+        f.write(dump_data)
 
 
 if __name__ == '__main__':
